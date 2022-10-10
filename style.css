@@ -230,11 +230,19 @@ body {
     .mobile-navbar .centerLink {
         left: 41.5%;
     }
+
+    .links {
+        margin-left: 36px;
+    }
 }
 
 @media (min-width: 425px) and (max-width: 768px) {
     .mobile-navbar .centerLink {
         left: 43%;
+    }
+
+    .links {
+        margin-left: 41px;
     }
 }
 
