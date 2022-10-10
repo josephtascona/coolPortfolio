@@ -3,9 +3,14 @@ body {
     font-family: sans-serif;
 }
 
+.main {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
 .projects {
-    position: relative;
-    left: 4%;
+    grid-column: 2 / span 11;
+    margin-top: 150px;
 }
 
 .project {
@@ -170,19 +175,11 @@ body {
     .centerLink {
         left: 44.5%;
     }
-
-    .project {
-        left: -2%;
-    }
 }
 
 @media (min-width: 375px) and (max-width: 425px) {
     .centerLink {
         left: 45%;
-    }
-
-    .project {
-        left: -1%;
     }
 }
 
@@ -190,7 +187,6 @@ body {
     .project {
         width: 35%;
         height: 150px;
-        left: 4%;
     }
 
     .centerLink {
@@ -206,7 +202,6 @@ body {
     .project {
         width: 80%;
         height: 150px;
-        left: 2%;
     }
 }
 
@@ -214,7 +209,6 @@ body {
     .project {
         width: 25%;
         height: 190px;
-        left: 0%;
     }
 
     .centerLink {
@@ -230,7 +224,6 @@ body {
     .project {
         width: 25%;
         height: 230px;
-        left:5%;
     }
 
     .hoverItem p {
@@ -241,13 +234,11 @@ body {
 @media (min-width: 1440px) and (max-width: 2560px) {
     .project {
         width: 20%;
-        left: 1.5%;
     }
 }
 
 @media (min-width: 2560px) {
     .project {
         height: 350px;
-        left: 1.25%;
     }
 }
