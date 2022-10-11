@@ -10,7 +10,8 @@ body {
 
 .projects {
     grid-column: 2 / span 11;
-    margin-top: 150px;
+    margin-top: 125px;
+    margin-bottom: 80px;
 }
 
 .project {
