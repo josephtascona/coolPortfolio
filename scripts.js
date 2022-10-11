@@ -8,15 +8,6 @@ function hideHoverItem(index) {
     }, 370)
 }
 
-function mobileNavbar() {
-    var x = document.querySelector(".links");
-    if (x.style.display === "block") {
-        x.style.display = "none";
-    } else {
-        x.style.display = "block";
-    }
-}
-
 window.onload = function () {
     document.querySelector('.main').style.display = "grid";
     document.querySelector('.loader').style.display = "none";

@@ -51,12 +51,12 @@ body {
 }
 
 .hoverItem a {
-    color: white;
+    color: #E1D9D1;
     text-decoration: none;
 }
 
 .hoverItem a:hover {
-    color: #E1D9D1;
+    color: white;
 }
 
 .hoverItem p {
