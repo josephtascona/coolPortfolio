@@ -238,6 +238,12 @@ body {
     }
 }
 
+@media (min-width: 1440px) and (max-width: 1540px) {
+    .project {
+        width: 27%;
+    }
+}
+
 @media (min-width: 2560px) {
     .project {
         height: 350px;
