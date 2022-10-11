@@ -16,3 +16,8 @@ function mobileNavbar() {
         x.style.display = "block";
     }
 }
+
+window.onload = function () {
+    document.querySelector('.main').style.display = "grid";
+    document.querySelector('.loader').style.display = "none";
+}
