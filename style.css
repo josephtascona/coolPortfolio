@@ -116,7 +116,7 @@ body {
 }
 
 .centerLink .logo:hover {
-    background-image: url('./images/teal-brain.png');
+    content: url('./images/teal-brain.png');
 }
 
 .navbar {
