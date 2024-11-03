@@ -9,17 +9,22 @@ body {
 }
 
 .projects {
-    grid-column: 2 / span 11;
+    grid-column: 2 / span 10;
     margin-top: 125px;
     margin-bottom: 80px;
+    display: grid;
+    gap: 40px;
+    justify-content: center;
+    /* Center-align items */
+    grid-auto-flow: dense;
+    /* Automatically manage flow to avoid gaps */
 }
 
+/* Responsive grid layout for .project */
 .project {
-    display: inline-block;
-    width: 22%;
-    margin: 20px 20px;
-    height: 270px;
     position: relative;
+    height: 270px;
+    width: 100%;
 }
 
 .project img {
@@ -63,47 +68,61 @@ body {
     margin-top: 120px;
 }
 
-.topLeftLink {
+/* Fixed link styles */
+.topLeftLink,
+.topRightLink,
+.bottomLeftLink,
+.bottomRightLink {
     position: fixed;
-    top: 47px;
-    left: 40px;
     z-index: 10;
 }
 
-.topLeftLink a {
-    text-decoration: none;
-    color: #3d3d3d;
+.centerLink {
+    position: absolute;
+    z-index: 10;
 }
 
-.topLeftLink a:hover {
-    border-bottom: 3px solid teal;
-    color: teal;
+.topLeftLink {
+    top: 47px;
+    left: 40px;
 }
 
 .topRightLink {
-    position: fixed;
     top: 47px;
     right: 40px;
-    z-index: 10;
 }
 
-.topRightLink a {
+.bottomLeftLink {
+    bottom: 47px;
+    left: 40px;
+}
+
+.bottomRightLink {
+    bottom: 47px;
+    right: 40px;
+}
+
+.topLeftLink a,
+.topRightLink a,
+.bottomLeftLink a,
+.bottomRightLink a {
     text-decoration: none;
     color: #3d3d3d;
 }
 
-.topRightLink a:hover {
+.topLeftLink a:hover,
+.topRightLink a:hover,
+.bottomLeftLink a:hover,
+.bottomRightLink a:hover {
     border-bottom: 3px solid teal;
     color: teal;
 }
 
 .centerLink {
-    position: fixed;
     width: 50px;
     height: 50px;
     top: 30px;
     left: 48.75%;
-    z-index: 10;
 }
 
 .centerLink .logo {
@@ -119,44 +138,7 @@ body {
     content: url('./images/teal-brain.png');
 }
 
-.navbar {
-    margin-bottom: 140px;
-}
-
-.bottomRightLink {
-    position: fixed;
-    bottom: 47px;
-    right: 40px;
-    z-index: 10;
-}
-
-.bottomRightLink a {
-    text-decoration: none;
-    color: #3d3d3d;
-}
-
-.bottomRightLink a:hover {
-    border-bottom: 3px solid teal;
-    color: teal;
-}
-
-.bottomLeftLink {
-    position: fixed;
-    bottom: 47px;
-    left: 40px;
-    z-index: 10;
-}
-
-.bottomLeftLink a {
-    text-decoration: none;
-    color: #3d3d3d;
-}
-
-.bottomLeftLink a:hover {
-    border-bottom: 3px solid teal;
-    color: teal;
-}
-
+/* Loader styles */
 .main {
     display: none;
 }
@@ -182,131 +164,33 @@ body {
     }
 }
 
-@media (min-width: 320px) and (max-width: 425px) {
-    .project {
-        width: 80%;
-        height: 150px;
-    }
+/* Responsive column layout for .project */
 
-    #firstProject {
-        margin-top: -30px;
-    }
-
-    .hoverItem p {
-        margin-top: 65px;
-    }
-
-    .loader {
-        margin-top: 73%;
+/* Extra-large screens (4 columns) */
+@media (min-width: 1440px) {
+    .projects {
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
-@media (min-width: 320px) and (max-width: 375px) {
-    .centerLink {
-        left: 44.5%;
-    }
-
-    .loader {
-        margin-top: 63%;
+/* Large screens (3 columns) */
+@media (min-width: 1024px) and (max-width: 1439px) {
+    .projects {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
-@media (min-width: 375px) and (max-width: 425px) {
-    .centerLink {
-        left: 45%;
-    }
-
-    .loader {
-        margin-top: 53%;
+/* Medium screens (2 columns) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (min-width: 425px) and (max-width: 768px) {
-    .project {
-        width: 35%;
-        height: 150px;
-    }
-
-    .centerLink {
-        left: 46%;
-    }
-
-    .hoverItem p {
-        margin-top: 65px;
-    }
-
-    .loader {
-        margin-top: 53%;
-    }
-}
-
-@media (min-width: 425px) and (max-width: 475px) {
-    .project {
-        width: 80%;
-        height: 150px;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .project {
-        width: 25%;
-        height: 190px;
-    }
-
-    .centerLink {
-        left: 46.9%;
-    }
-
-    .hoverItem p {
-        margin-top: 85px;
-    }
-
-    .loader {
-        margin-top: 30%;
-    }
-}
-
-@media (min-width: 1024px) and (max-width: 1440px) {
-    .project {
-        width: 27%;
-        height: 230px;
-    }
-
-    .hoverItem p {
-        margin-top: 105px;
-    }
-
-    .loader {
-        margin-top: 31%;
-    }
-}
-
-@media (min-width: 1440px) and (max-width: 2560px) {
-    .project {
-        width: 20%;
-    }
-
-    .loader {
-        margin-top: 19%;
-    }
-}
-
-@media (min-width: 1440px) and (max-width: 1540px) {
-    .project {
-        width: 27%;
-    }
-
-    .loader {
-        margin-top: 18%;
-    }
-}
-
-@media (min-width: 2560px) {
-    .project {
-        height: 350px;
-    }
-
-    .loader {
-        margin-top: 32%;
+/* Small screens (1 column, centered) */
+@media (max-width: 767px) {
+    .projects {
+        grid-template-columns: 1fr;
+        justify-items: center;
     }
 }
