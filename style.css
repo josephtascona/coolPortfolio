@@ -193,4 +193,32 @@ body {
         grid-template-columns: 1fr;
         justify-items: center;
     }
+
+    .topLeftLink,
+    .topRightLink,
+    .bottomLeftLink,
+    .bottomRightLink {
+        position: absolute;
+        z-index: 10;
+    }
+
+    .topLeftLink {
+        top: 37px;
+        left: 40px;
+    }
+
+    .topRightLink {
+        top: 37px;
+        right: 40px;
+    }
+
+    .bottomLeftLink {
+        top: 67px;
+        left: 40px;
+    }
+
+    .bottomRightLink {
+        top: 67px;
+        right: 40px;
+    }
 }
