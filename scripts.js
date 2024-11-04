@@ -3,9 +3,7 @@ function showHoverItem(index) {
 }
 
 function hideHoverItem(index) {
-    setTimeout(function() {
-        document.querySelectorAll('.hoverItem')[index].style.display = "none";
-    }, 370)
+    document.querySelectorAll('.hoverItem')[index].style.display = "none";
 }
 
 window.onload = function () {
