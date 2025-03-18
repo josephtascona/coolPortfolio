@@ -154,6 +154,12 @@ body {
     margin-top: 19%;
 }
 
+.project div a img {
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+
 @keyframes spin {
     0% {
         transform: rotate(0deg);
