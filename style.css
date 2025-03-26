@@ -92,7 +92,8 @@ body {
 .topLeftLink,
 .topRightLink,
 .bottomLeftLink,
-.bottomRightLink {
+.bottomRightLink,
+.centerLink {
     position: fixed;
     z-index: 10;
 }
