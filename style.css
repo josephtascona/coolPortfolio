@@ -204,6 +204,12 @@ body {
     position: relative;
     width: 50px;
     height: 50px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project div a img:hover {
+    transform: scale(1.2) rotate(5deg);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 @keyframes spin {
