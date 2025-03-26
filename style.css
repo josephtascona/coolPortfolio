@@ -285,37 +285,3 @@ body {
         padding: 0 20px;
     }
 }
-
-/* Mobile interactive effects */
-@media (max-width: 480px) {
-    /* Ripple effect for clickable elements */
-    a {
-        position: relative;
-        overflow: hidden;
-    }
-
-    a:active::after {
-        content: "";
-        position: absolute;
-        width: 100px;
-        height: 100px;
-        background: rgba(0, 0, 0, 0.2);
-        border-radius: 50%;
-        transform: translate(-50%, -50%) scale(0);
-        top: 50%;
-        left: 50%;
-        animation: ripple-effect 0.6s linear;
-    }
-
-    @keyframes ripple-effect {
-        to {
-            transform: translate(-50%, -50%) scale(2.5);
-            opacity: 0;
-        }
-    }
-
-    /* Scale effect on project images when tapped */
-    .project div a img:active {
-        transform: scale(1.1);
-    }
-}
